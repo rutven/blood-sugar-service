@@ -40,7 +40,6 @@ public class RestServiceTest {
 
         template.postForEntity(USER_ENDPOINT, user, User.class);
 
-        /*
         ResponseEntity<User> userResponseEntity = template.getForEntity(USER_ENDPOINT + "/1", User.class);
 
         System.out.println("response = " + userResponseEntity.getBody().toString());
@@ -50,6 +49,5 @@ public class RestServiceTest {
         assertEquals("Age is incorrect", userResponseEntity.getBody().getAge().longValue(), AGE);
         assertEquals("Email is incorrect", userResponseEntity.getBody().getEmail(), EMAIL);
         assertEquals("Password is incorrect", userResponseEntity.getBody().getPassword(), PASSWORD);
-        */
     }
 }

@@ -31,7 +31,7 @@ public class MonitorController {
         return allUsers;
     }
 
-    @GetMapping(value = USERS_PATH + "{id}")
+    @GetMapping(value = USERS_PATH + "/{id}")
     public User getUserById(@PathVariable("id") String id) {
         System.out.println("get user by id = " + id);
         final User user = monitorService.getUserById(id);
