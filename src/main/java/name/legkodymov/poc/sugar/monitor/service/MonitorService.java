@@ -1,8 +1,11 @@
 package name.legkodymov.poc.sugar.monitor.service;
 
 import javassist.NotFoundException;
+import name.legkodymov.poc.sugar.monitor.controller.MonitorController;
 import name.legkodymov.poc.sugar.monitor.entity.User;
 import name.legkodymov.poc.sugar.monitor.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,7 @@ import java.util.List;
 @Service
 public class MonitorService {
 
+    private static final Logger log = LoggerFactory.getLogger(MonitorController.class);
     private final UserRepository userRepository;
 
     @Autowired

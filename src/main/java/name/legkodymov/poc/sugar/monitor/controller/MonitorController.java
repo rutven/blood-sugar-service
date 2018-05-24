@@ -4,6 +4,8 @@ package name.legkodymov.poc.sugar.monitor.controller;
 import javassist.NotFoundException;
 import name.legkodymov.poc.sugar.monitor.entity.User;
 import name.legkodymov.poc.sugar.monitor.service.MonitorService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,8 @@ public class MonitorController {
     public final static String USERS_PATH = "/users";
 
     private final MonitorService monitorService;
+
+    private static final Logger log = LoggerFactory.getLogger(MonitorController.class);
 
     @Autowired
     public MonitorController(MonitorService monitorService) {
