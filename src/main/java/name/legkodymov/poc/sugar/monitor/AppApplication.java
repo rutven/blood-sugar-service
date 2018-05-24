@@ -1,6 +1,7 @@
 package name.legkodymov.poc.sugar.monitor;
 
-import name.legkodymov.poc.sugar.monitor.entity.Customer;
+import name.legkodymov.poc.sugar.monitor.entity.User;
+import name.legkodymov.poc.sugar.monitor.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -19,34 +20,34 @@ public class AppApplication {
     }
 
     @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    public CommandLineRunner demo(UserRepository repository) {
         return (args) -> {
-            //save some customers
-            repository.save(new Customer("Jack", "Bauer"));
-            repository.save(new Customer("Chloe", "Smith"));
-            repository.save(new Customer("Jennifer", "Palmer"));
-            repository.save(new Customer("David", "Smith"));
+            //save some users
+            repository.save(new User("Jack", "Bauer"));
+            repository.save(new User("Chloe", "Smith"));
+            repository.save(new User("Jennifer", "Palmer"));
+            repository.save(new User("David", "Smith"));
 
             //fetch all
-            log.info("Customers found by findAll");
+            log.info("Users found by findAll");
             log.info("------------------------------");
-            for (Customer customer : repository.findAll()) {
-                log.info(customer.toString());
+            for (User user : repository.findAll()) {
+                log.info(user.toString());
             }
             log.info("");
 
-            //fetch customer by Id
-            log.info("Customers found by findOne");
+            //fetch user by Id
+            log.info("Users found by findOne");
             log.info("------------------------------");
-            Customer customer1 = repository.findOne(1L);
-            log.info(customer1.toString());
+            User user1 = repository.findOne(1L);
+            log.info(user1.toString());
             log.info("");
 
             //fetch by lastName
-            log.info("Customers found by findByLastName");
+            log.info("Users found by findByLastName");
             log.info("------------------------------");
-            for (Customer customer : repository.findByLastName("Smith")) {
-                log.info(customer.toString());
+            for (User user : repository.findByLastName("Smith")) {
+                log.info(user.toString());
             }
             log.info("");
 

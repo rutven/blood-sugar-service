@@ -2,6 +2,7 @@ package name.legkodymov.poc.sugar.monitor.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class Customer {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +25,13 @@ public class Customer {
 
     private String lastName;
 
-    public Customer(String firstName, String lastName) {
+    private Integer age;
+
+    private String email;
+
+    private String password;
+
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
