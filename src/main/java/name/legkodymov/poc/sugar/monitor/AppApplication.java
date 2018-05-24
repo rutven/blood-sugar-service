@@ -19,6 +19,7 @@ public class AppApplication {
         SpringApplication.run(AppApplication.class, args);
     }
 
+    /*
     @Bean
     public CommandLineRunner demo(UserRepository repository) {
         return (args) -> {
@@ -39,7 +40,7 @@ public class AppApplication {
             //fetch user by Id
             log.info("Users found by findOne");
             log.info("------------------------------");
-            User user1 = repository.findOne(1L);
+            User user1 = repository.findOne("1");
             log.info(user1.toString());
             log.info("");
 
@@ -53,4 +54,5 @@ public class AppApplication {
 
         };
     }
+    */
 }
