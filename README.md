@@ -1,4 +1,5 @@
-# poc-sugar-monitor
-Blood sugar diary and monitor app
+# Blood sugar service
 
-[![Build Status](https://travis-ci.org/rutven/poc-sugar-monitor.svg?branch=master)](https://travis-ci.org/rutven/poc-sugar-monitor)
+Blood sugar diary and monitor backend service
+
+[![Build Status](https://app.travis-ci.com/rutven/blood-sugar-service.svg?branch=master)](https://app.travis-ci.com/rutven/blood-sugar-service)
