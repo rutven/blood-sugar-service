@@ -2,4 +2,4 @@
 
 Blood sugar diary and monitor backend service
 
-[![Build Status](https://app.travis-ci.com/rutven/blood-sugar-service.svg?branch=master)](https://app.travis-ci.com/rutven/blood-sugar-service)
+[![CircleCI](https://circleci.com/gh/rutven/blood-sugar-service/tree/master.svg?style=svg)](https://circleci.com/gh/rutven/blood-sugar-service/tree/master)
